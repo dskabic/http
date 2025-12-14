@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB4 – HTTP/2 Demonstration</title>
+    <script src="js/test1.js" defer></script>
+    <script src="js/test2.js" defer></script>
+    <script src="js/test3.js" defer></script>
+    <script src="js/test4.js" defer></script>
+    <script src="js/test5.js" defer></script>
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>HTTP/1.1 vs HTTP/2 Performance Test</h1>
+            <p class="subtitle">Comparing load times with multiple resources</p>
+        </header>
+
+        <div class="info-card">
+            <h2>Test Information</h2>
+            <p>This page loads <strong>10 CSS files and 5 JS files</strong> to demonstrate the difference between HTTP/1.1 and HTTP/2.</p>
+            <div class="protocol-info">
+                <div class="protocol-box">
+                    <h3>HTTP/1.1</h3>
+                    <ul>
+                        <li>Limited concurrent connections (6-8)</li>
+                        <li>Head-of-line blocking</li>
+                        <li>Sequential processing</li>
+                    </ul>
+                </div>
+                <div class="protocol-box">
+                    <h3>HTTP/2</h3>
+                    <ul>
+                        <li>Multiplexing over single connection</li>
+                        <li>Parallel requests</li>
+                        <li>Header compression</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timing-card">
+            <h2>Page Load Timing</h2>
+            <div id="timing-info">
+                <p><strong>DOM Content Loaded:</strong> <span id="dom-time">Calculating...</span></p>
+                <p><strong>Page Load Complete:</strong> <span id="load-time">Calculating...</span></p>
+                <p><strong>Protocol:</strong> <span id="protocol">Detecting...</span></p>
+            </div>
+        </div>
+        <div class="demo-section">
+            <h2>Visual Elements (Styled by Multiple CSS Files)</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Card 1</h3>
+                    <p>Styled with cards.css</p>
+                </div>
+                <div class="card">
+                    <h3>Card 2</h3>
+                    <p>Styled with cards.css</p>
+                </div>
+                <div class="card">
+                    <h3>Card 3</h3>
+                    <p>Styled with cards.css</p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-success">Success Button</button>
+            </div>
+
+            <div class="animated-box">
+                <p>This box uses animations.css</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>Difference between HTTP/1.1 and HTTP/2 demonstrated</p>
+        </footer>
+    </div>
+</body>
+</html>
